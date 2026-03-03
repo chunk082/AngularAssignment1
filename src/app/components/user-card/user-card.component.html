@@ -1,0 +1,13 @@
+<article class="card h-100 shadow-sm border-0 bg-primary-subtle">
+  <div class="card-body">
+    <h2 class="h5 card-title mb-3 text-primary-emphasis">User Card</h2>
+    <img
+      class="rounded-circle border border-3 border-primary-subtle mb-3 bg-white"
+      style="width: 96px; height: 96px; object-fit: cover;"
+      [src]="user().profilePicture"
+      [alt]="user().name + ' profile picture'"
+    />
+    <p class="mb-1"><span class="fw-semibold">Name:</span> {{ user().name }}</p>
+    <p class="mb-0"><span class="fw-semibold">Age:</span> {{ user().age }}</p>
+  </div>
+</article>

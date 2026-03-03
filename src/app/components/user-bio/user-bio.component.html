@@ -1,0 +1,17 @@
+<article class="card h-100 shadow-sm border-0 bg-success-subtle">
+  <div class="card-body">
+    <h2 class="h5 card-title mb-3 text-success-emphasis">User Bio</h2>
+
+    @if (!isEditing) {
+      <p class="mb-3">{{ bio() }}</p>
+      <button class="btn btn-outline-success" type="button" (click)="startEditing()">Edit Bio</button>
+    } @else {
+      <label class="form-label" for="bioText">Update bio:</label>
+      <textarea class="form-control mb-3" id="bioText" rows="4" [(ngModel)]="draftBio"></textarea>
+      <div class="d-flex gap-2">
+        <button class="btn btn-primary" type="button" (click)="saveBio()">Save</button>
+        <button class="btn btn-secondary" type="button" (click)="cancelEditing()">Cancel</button>
+      </div>
+    }
+  </div>
+</article>
